@@ -22,4 +22,4 @@ MongoDB stores telemetry readings → a Django REST API endpoint (`/api/telemetr
    npm install
    npm run dev
    ```
-4. Open http://localhost:5173 and pick a satellite from the dropdown.
+4. Open `http://localhost:5173` in your browser and pick a satellite from the dropdown.
