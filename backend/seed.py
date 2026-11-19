@@ -1,8 +1,9 @@
+import os
 from datetime import datetime, timedelta, timezone
 import random
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.environ.get("MONGO_URL", "mongodb://localhost:27017"))
 db = client["satellite_db"]
 readings = db["telemetry"]
 

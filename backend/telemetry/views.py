@@ -1,7 +1,8 @@
+import os
 from django.http import JsonResponse
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.environ.get("MONGO_URL", "mongodb://localhost:27017"))
 readings = client["satellite_db"]["telemetry"]
 
 
